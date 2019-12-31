@@ -1,11 +1,13 @@
 <template>
-  <article class="media">
+<!--  <article class="media">-->
     <div class="media-content">
       <h1 class="title">
-        <a>{{ post.title }}</a>
+        <router-link :to="{name: 'post-detail', params: {slug: post.slug }}">
+          {{ post.title }}
+        </router-link>
       </h1>
     </div>
-  </article>
+<!--  </article>-->
 </template>
 
 <script>

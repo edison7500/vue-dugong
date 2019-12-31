@@ -1,11 +1,15 @@
 <template>
-  <div class="container">
-    <navbar></navbar>
-    <div class="columns is-desktop is-multiline clearfix">
-      <div class="column is-8">
-        <section class="box" v-for="(post, index) in posts" v-bind:key="index">
-          <cell :post=post></cell>
-        </section>
+  <div>
+    <d-navbar></d-navbar>
+    <div class="container">
+      <div class="columns is-desktop is-multiline clearfix">
+        <div class="column is-8">
+          <section class="box">
+            <article class="media" v-for="(post, index) in posts" v-bind:key="index">
+              <post-cell :post=post></post-cell>
+            </article>
+          </section>
+        </div>
       </div>
     </div>
   </div>
@@ -13,14 +17,14 @@
 
 <script>
 import { fetchList } from '@/api/post';
-import navbar from '@/components/Navbar/index';
-import cell from './_cell';
+import NavBar from '@/components/Navbar/index';
+import PostCell from './_cell';
 
 export default {
   name: 'index',
-  components: { navbar, cell },
-  comments: {
-    navbar,
+  components: {
+    'd-navbar': NavBar,
+    'post-cell': PostCell,
   },
   data() {
     return {

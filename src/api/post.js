@@ -9,3 +9,11 @@ export function fetchList(query) {
     params: query,
   });
 }
+
+
+export function fetchDetail(slug) {
+  return request({
+    url: `/blog/${slug}/`,
+    method: 'get',
+  });
+}
