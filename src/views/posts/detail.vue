@@ -7,7 +7,7 @@
           <section class="box">
             <h1 class="title">{{ post.title }}</h1>
             <article class="content">
-              <vue-markdown :source="post.content"></vue-markdown>
+              <vue-markdown :source="post.content" :breaks="breaks"></vue-markdown>
             </article>
           </section>
         </div>
@@ -31,6 +31,7 @@ export default {
   },
   data() {
     return {
+      breaks: false,
       post: {},
     };
   },

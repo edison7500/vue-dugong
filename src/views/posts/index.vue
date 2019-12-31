@@ -12,18 +12,21 @@
         </div>
       </div>
     </div>
+    <d-footer></d-footer>
   </div>
 </template>
 
 <script>
 import { fetchList } from '@/api/post';
 import NavBar from '@/components/Navbar/index';
+import Footer from '@/components/Footer/index';
 import PostCell from './_cell';
 
 export default {
   name: 'index',
   components: {
     'd-navbar': NavBar,
+    'd-footer': Footer,
     'post-cell': PostCell,
   },
   data() {
