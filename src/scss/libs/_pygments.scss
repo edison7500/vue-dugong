@@ -1,0 +1,238 @@
+//colors
+$color_cream_approx: #ffffcc;
+$color_loafer_approx: #eeeedd;
+$forest_green: #228b22;
+$color_tamarillo_approx: #a61717;
+$color_swiss_coffee_approx: #e3d2d2;
+$color_violet_eggplant_approx: #8b008b;
+$color_jelly_bean_approx: #1e889b;
+$color_bright_red_approx: #aa0000;
+$navy_blue: #000080;
+$color_forest_green_approx: #00aa00;
+$color_suva_gray_approx: #888888;
+$color_fuscous_gray_approx: #555555;
+$color_seance_approx: #800080;
+$color_bahama_blue_approx: #00688b;
+$color_fuchsia_pink_approx: #b452cd;
+$color_fuzzy_wuzzy_brown_approx: #cd5555;
+$color_limeade_approx: #658b00;
+$color_salem_approx: #008b45;
+$color_sirocco_approx: #707a7c;
+$color_pink_swan_approx: #bbbbbb;
+$color_elm_approx: #1c7e71;
+$color_hot_cinnamon_approx: #cb6c20;
+
+.codehilite {
+  background: $color_loafer_approx;
+  .hll {
+    background-color: $color_cream_approx;
+  }
+  .c {
+    color: $forest_green;
+  }
+  .err {
+    color: $color_tamarillo_approx;
+    background-color: $color_swiss_coffee_approx;
+  }
+  .k {
+    color: $color_violet_eggplant_approx;
+    font-weight: bold;
+  }
+  .ch {
+    color: $forest_green;
+  }
+  .cm {
+    color: $forest_green;
+  }
+  .cp {
+    color: $color_jelly_bean_approx;
+  }
+  .cpf {
+    color: $forest_green;
+  }
+  .c1 {
+    color: $forest_green;
+  }
+  .cs {
+    color: $color_violet_eggplant_approx;
+    font-weight: bold;
+  }
+  .gd {
+    color: $color_bright_red_approx;
+  }
+  .ge {
+    font-style: italic;
+  }
+  .gr {
+    color: $color_bright_red_approx;
+  }
+  .gh {
+    color: $navy_blue;
+    font-weight: bold;
+  }
+  .gi {
+    color: $color_forest_green_approx;
+  }
+  .go {
+    color: $color_suva_gray_approx;
+  }
+  .gp {
+    color: $color_fuscous_gray_approx;
+  }
+  .gs {
+    font-weight: bold;
+  }
+  .gu {
+    color: $color_seance_approx;
+    font-weight: bold;
+  }
+  .gt {
+    color: $color_bright_red_approx;
+  }
+  .kc {
+    color: $color_violet_eggplant_approx;
+    font-weight: bold;
+  }
+  .kd {
+    color: $color_violet_eggplant_approx;
+    font-weight: bold;
+  }
+  .kn {
+    color: $color_violet_eggplant_approx;
+    font-weight: bold;
+  }
+  .kp {
+    color: $color_violet_eggplant_approx;
+    font-weight: bold;
+  }
+  .kr {
+    color: $color_violet_eggplant_approx;
+    font-weight: bold;
+  }
+  .kt {
+    color: $color_bahama_blue_approx;
+    font-weight: bold;
+  }
+  .m {
+    color: $color_fuchsia_pink_approx;
+  }
+  .s {
+    color: $color_fuzzy_wuzzy_brown_approx;
+  }
+  .na {
+    color: $color_limeade_approx;
+  }
+  .nb {
+    color: $color_limeade_approx;
+  }
+  .nc {
+    color: $color_salem_approx;
+    font-weight: bold;
+  }
+  .no {
+    color: $color_bahama_blue_approx;
+  }
+  .nd {
+    color: $color_sirocco_approx;
+  }
+  .ne {
+    color: $color_salem_approx;
+    font-weight: bold;
+  }
+  .nf {
+    color: $color_salem_approx;
+  }
+  .nn {
+    color: $color_salem_approx;
+    text-decoration: underline;
+  }
+  .nt {
+    color: $color_violet_eggplant_approx;
+    font-weight: bold;
+  }
+  .nv {
+    color: $color_bahama_blue_approx;
+  }
+  .ow {
+    color: $color_violet_eggplant_approx;
+  }
+  .w {
+    color: $color_pink_swan_approx;
+  }
+  .mb {
+    color: $color_fuchsia_pink_approx;
+  }
+  .mf {
+    color: $color_fuchsia_pink_approx;
+  }
+  .mh {
+    color: $color_fuchsia_pink_approx;
+  }
+  .mi {
+    color: $color_fuchsia_pink_approx;
+  }
+  .mo {
+    color: $color_fuchsia_pink_approx;
+  }
+  .sa {
+    color: $color_fuzzy_wuzzy_brown_approx;
+  }
+  .sb {
+    color: $color_fuzzy_wuzzy_brown_approx;
+  }
+  .sc {
+    color: $color_fuzzy_wuzzy_brown_approx;
+  }
+  .dl {
+    color: $color_fuzzy_wuzzy_brown_approx;
+  }
+  .sd {
+    color: $color_fuzzy_wuzzy_brown_approx;
+  }
+  .s2 {
+    color: $color_fuzzy_wuzzy_brown_approx;
+  }
+  .se {
+    color: $color_fuzzy_wuzzy_brown_approx;
+  }
+  .sh {
+    color: $color_elm_approx;
+    font-style: italic;
+  }
+  .si {
+    color: $color_fuzzy_wuzzy_brown_approx;
+  }
+  .sx {
+    color: $color_hot_cinnamon_approx;
+  }
+  .sr {
+    color: $color_elm_approx;
+  }
+  .s1 {
+    color: $color_fuzzy_wuzzy_brown_approx;
+  }
+  .ss {
+    color: $color_fuzzy_wuzzy_brown_approx;
+  }
+  .bp {
+    color: $color_limeade_approx;
+  }
+  .fm {
+    color: $color_salem_approx;
+  }
+  .vc {
+    color: $color_bahama_blue_approx;
+  }
+  .vg {
+    color: $color_bahama_blue_approx;
+  }
+  .vi {
+    color: $color_bahama_blue_approx;
+  }
+  .vm {
+    color: $color_bahama_blue_approx;
+  }
+  .il {
+    color: $color_fuchsia_pink_approx;
+  }
+}

@@ -11,13 +11,5 @@ export default {
 </script>
 
 <style lang="scss">
-  @import "~bulma/sass/utilities/_all";
-
-  $body-background-color: #f8f8f8;
-
-  $link: $black;
-  $link-invert: $grey;
-
-  @import "~bulma";
-  @import "~buefy/src/scss/buefy";
+  @import "scss/main";
 </style>

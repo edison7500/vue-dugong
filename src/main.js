@@ -2,7 +2,7 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue';
 import Buefy from 'buefy';
-import 'buefy/dist/buefy.css';
+// import 'buefy/dist/buefy.css';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';

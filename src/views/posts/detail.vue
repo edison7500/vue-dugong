@@ -6,8 +6,9 @@
         <div class="column is-8 is-desktop">
           <section class="box">
             <h1 class="title">{{ post.title }}</h1>
-            <article class="content">
-              <vue-markdown :source="post.content" :breaks="breaks"></vue-markdown>
+            <article class="content" v-html="post.html_content">
+<!--              {{ post.html_content }}-->
+<!--              <vue-markdown :source="post.content" :breaks="breaks"></vue-markdown>-->
             </article>
           </section>
         </div>
