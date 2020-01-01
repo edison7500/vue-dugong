@@ -7,20 +7,19 @@
           <section class="box">
             <h1 class="title">{{ post.title }}</h1>
             <article class="content" v-html="post.html_content">
-<!--              {{ post.html_content }}-->
-<!--              <vue-markdown :source="post.content" :breaks="breaks"></vue-markdown>-->
             </article>
           </section>
         </div>
       </div>
     </div>
+    <d-footer></d-footer>
   </div>
 </template>
 
 <script>
-import VueMarkdown from 'vue-markdown';
 import { fetchDetail } from '@/api/post';
 import Navbar from '@/components/Navbar/index';
+import Footerbar from '@/components/Footer/index';
 
 
 export default {
@@ -37,15 +36,16 @@ export default {
     };
   },
   created() {
-    this.getDetail();
+    this.slug = this.$route.params.slug;
+    this.getDetail(this.slug);
   },
   components: {
     'd-navbar': Navbar,
-    'vue-markdown': VueMarkdown,
+    'd-footer': Footerbar,
   },
   methods: {
-    getDetail() {
-      fetchDetail(this.$route.params.slug).then((response) => {
+    getDetail(slug) {
+      fetchDetail(slug).then((response) => {
         this.post = response.data;
       });
     },
