@@ -9,7 +9,7 @@
         </p>
         <p>
           <a  href="https://github.com/edison7500/dugong">
-            <font-awesome-icon  :icon="['fab', 'github-alt']" size="2x" />
+            <font-awesome-icon :icon="['fab', 'github-alt']" size="2x" />
           </a>
         </p>
       </div>
