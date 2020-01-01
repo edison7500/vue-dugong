@@ -1,18 +1,26 @@
 <template>
   <div>
-    <d-navbar></d-navbar>
-    <div class="container">
-      <div class="columns is-desktop is-multiline clearfix">
-        <div class="column is-8">
-          <section class="box">
-            <article class="media" v-for="(post, index) in posts" v-bind:key="index">
-              <post-cell :post=post></post-cell>
-            </article>
-          </section>
+    <section>
+      <d-navbar></d-navbar>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="columns is-desktop is-multiline clearfix">
+          <div class="column is-8">
+            <section class="box">
+              <article class="media" v-for="(post, index) in posts" v-bind:key="index">
+                <post-cell :post=post></post-cell>
+              </article>
+            </section>
+          </div>
         </div>
       </div>
-    </div>
-    <d-footer></d-footer>
+    </section>
+
+    <section>
+      <d-footer></d-footer>
+    </section>
   </div>
 </template>
 
