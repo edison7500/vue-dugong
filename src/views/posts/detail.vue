@@ -1,8 +1,6 @@
 <template>
   <div>
-    <section>
-      <d-navbar></d-navbar>
-    </section>
+    <d-navbar></d-navbar>
 
     <section class="section">
       <div class="container">
@@ -10,11 +8,13 @@
           <div class="column is-8 is-desktop">
             <div class="box">
               <h1 class="title">{{ post.title }}</h1>
-              <div class="meta">
-                <time>
-                  <font-awesome-icon :icon="['far', 'calendar-alt']"/>
-                  {{ post.created_at_ts|ts2dt_str }}
-                </time>
+              <div class="level">
+                <div class="level-left">
+                  <div class="level-item">
+                    <font-awesome-icon :icon="['far', 'clock']" />
+                    <p>{{ post.created_at_ts|ts2datetime }}</p>
+                  </div>
+                </div>
               </div>
               <article class="content" v-html="post.html_content"></article>
             </div>
@@ -23,17 +23,15 @@
       </div>
     </section>
 
-    <section>
-      <d-footer></d-footer>
-    </section>
+    <d-footer></d-footer>
   </div>
 </template>
 
 <script>
-import moment from 'moment';
 import { fetchDetail } from '@/api/post';
 import Navbar from '@/components/Navbar/index';
 import Footerbar from '@/components/Footer/index';
+import { ts2datetime } from '@/filters';
 
 
 export default {
@@ -57,9 +55,7 @@ export default {
     'd-footer': Footerbar,
   },
   filters: {
-    ts2dt_str(ts) {
-      return moment.unix(ts).format('YYYY-MM-DD');
-    },
+    ts2datetime,
   },
   methods: {
     getDetail(slug) {

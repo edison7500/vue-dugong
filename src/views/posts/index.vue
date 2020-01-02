@@ -1,8 +1,6 @@
 <template>
   <div>
-    <section>
-      <d-navbar></d-navbar>
-    </section>
+    <d-navbar></d-navbar>
 
     <section class="section">
       <div class="container">
@@ -18,9 +16,7 @@
       </div>
     </section>
 
-    <section>
-      <d-footer></d-footer>
-    </section>
+    <d-footer></d-footer>
   </div>
 </template>
 
