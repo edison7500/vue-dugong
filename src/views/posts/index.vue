@@ -10,6 +10,8 @@
               <article class="media" v-for="(post, index) in posts" v-bind:key="index">
                 <post-cell :post=post></post-cell>
               </article>
+
+              <infinite-loading @infinite="infiniteHandler"></infinite-loading>
             </section>
           </div>
         </div>
@@ -39,18 +41,31 @@ export default {
       isLoading: true,
       query: {
         size: 20,
+        page: 1,
       },
     };
   },
-  created() {
-    this.getPost();
-  },
+  // created() {
+  //   this.getPost();
+  // },
   methods: {
-    getPost() {
-      this.isLoading = true;
+    // getPost() {
+    //   this.isLoading = true;
+    //   fetchList(this.query).then((response) => {
+    //     this.posts = response.data.results;
+    //     this.isLoading = false;
+    //   });
+    // },
+    infiniteHandler($state) {
       fetchList(this.query).then((response) => {
-        this.posts = response.data.results;
-        this.isLoading = false;
+        if (response.data.count) {
+          this.query.page += 1;
+          this.posts.push(...response.data.results);
+          $state.loaded();
+        } else {
+          $state.complete();
+        }
+        // this.isLoading = false;
       });
     },
   },

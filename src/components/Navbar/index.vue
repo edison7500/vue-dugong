@@ -22,7 +22,7 @@
             <font-awesome-icon :icon="['fab', 'github-alt']" />
           </a>
           <router-link :to="{name: 'about'}" class="navbar-item">
-            <font-awesome-icon :icon="['far', 'info']" />
+            <font-awesome-icon :icon="['fas', 'info']" />
           </router-link>
         </div>
 
