@@ -4520,6 +4520,11 @@ html-tags@^2.0.0:
   resolved "https://registry.yarnpkg.com/html-tags/-/html-tags-2.0.0.tgz#10b30a386085f43cede353cc8fa7cb0deeea668b"
   integrity sha1-ELMKOGCF9Dzt41PMj6fLDe7qZos=
 
+html-truncate@^1.2.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/html-truncate/-/html-truncate-1.2.2.tgz#db2e331dcf1cba0bd432a507d16e988609f2575f"
+  integrity sha1-2y4zHc8cugvUMqUH0W6YhgnyV18=
+
 html-webpack-plugin@^2.30.1:
   version "2.30.1"
   resolved "https://registry.yarnpkg.com/html-webpack-plugin/-/html-webpack-plugin-2.30.1.tgz#7f9c421b7ea91ec460f56527d78df484ee7537d5"
@@ -10146,6 +10151,13 @@ vue-template-es2015-compiler@^1.5.3, vue-template-es2015-compiler@^1.6.0:
   version "1.9.1"
   resolved "https://registry.yarnpkg.com/vue-template-es2015-compiler/-/vue-template-es2015-compiler-1.9.1.tgz#1ee3bc9a16ecbf5118be334bb15f9c46f82f5825"
   integrity sha512-4gDntzrifFnCEvyoO8PqyJDmguXgVPxKiIxrBKjIowvL9l+N66196+72XVYR8BBf1Uv1Fgt3bGevJ+sEmxfZzw==
+
+vue-truncate-collapsed@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/vue-truncate-collapsed/-/vue-truncate-collapsed-2.1.0.tgz#19404ea332647542a7e81f4773d09749af4056bc"
+  integrity sha512-dEI682h9YAfVYkfsTCQYmNjwzJZqvaMNB0WqtqX0EL3cApZv7pjRuQKG2IvaKTI59NSco8NreMRsviL46RDRrQ==
+  dependencies:
+    html-truncate "^1.2.2"
 
 vue@^2.5.2:
   version "2.6.11"

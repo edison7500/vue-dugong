@@ -12,8 +12,8 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
       '/api': {
-        // target: 'http://127.0.0.1:8000',
-        target: 'https://api.jiaxin.im',
+        target: 'http://127.0.0.1:8000',
+        // target: 'https://api.jiaxin.im',
         changeOrigin: true
       }
     },
