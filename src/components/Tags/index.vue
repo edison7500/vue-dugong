@@ -1,6 +1,6 @@
 <template>
-  <div class="level">
-    <div class="level-left"></div>
+  <div class="level-left">
+    <div class="tags"></div>
   </div>
 </template>
 
