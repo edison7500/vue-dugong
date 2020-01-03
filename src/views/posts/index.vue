@@ -6,13 +6,12 @@
       <div class="container">
         <div class="columns is-desktop is-multiline clearfix">
           <div class="column is-8">
-            <section class="box">
+            <div class="box">
               <article class="media" v-for="(post, index) in posts" v-bind:key="index">
                 <post-cell :post=post></post-cell>
               </article>
-
-              <infinite-loading @infinite="infiniteHandler"></infinite-loading>
-            </section>
+            </div>
+            <infinite-loading @infinite="infiniteHandler"></infinite-loading>
           </div>
         </div>
       </div>
@@ -38,24 +37,13 @@ export default {
   data() {
     return {
       posts: [],
-      isLoading: true,
       query: {
         size: 20,
         page: 1,
       },
     };
   },
-  // created() {
-  //   this.getPost();
-  // },
   methods: {
-    // getPost() {
-    //   this.isLoading = true;
-    //   fetchList(this.query).then((response) => {
-    //     this.posts = response.data.results;
-    //     this.isLoading = false;
-    //   });
-    // },
     infiniteHandler($state) {
       fetchList(this.query).then((response) => {
         if (response.data.count) {
@@ -65,7 +53,6 @@ export default {
         } else {
           $state.complete();
         }
-        // this.isLoading = false;
       });
     },
   },
