@@ -17,6 +17,8 @@
                 </div>
               </div>
               <article class="content" v-html="post.html_content"></article>
+
+              <hr>
             </div>
           </div>
         </div>

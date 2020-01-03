@@ -28,7 +28,7 @@ import Footer from '@/components/Footer/index';
 import PostCell from './_cell';
 
 export default {
-  name: 'index',
+  name: 'post-index',
   components: {
     'd-navbar': NavBar,
     'd-footer': Footer,
