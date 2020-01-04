@@ -13,8 +13,8 @@
         </div>
         <div class="level-right">
           <div class="level-item">
-            <font-awesome-icon :icon="['far', 'clock']" />
-            &nbsp;{{ post.created_at_ts|ts2datetime }}
+            <span class="icon is-small"><font-awesome-icon :icon="['far', 'clock']" /></span>
+            <time>{{ post.created_at_ts|ts2datetime }}</time>
           </div>
         </div>
       </div>

@@ -1,8 +1,18 @@
 <template>
   <div>
-    <d-navbar></d-navbar>
+    <d-navbar />
 
     <section class="section">
+      <div class="container">
+        <div class="columns">
+          <div class="column is-8-desktop is-offset-2-desktop">
+            <d-breadcrumb :items="items" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
       <div class="container">
         <div class="columns is-desktop is-centered">
           <div class="column is-8 is-desktop">
@@ -11,13 +21,14 @@
               <div class="level">
                 <div class="level-left">
                   <div class="level-item">
-                    <font-awesome-icon :icon="['far', 'clock']" />
-                    <p>{{ post.created_at_ts|ts2datetime }}</p>
+                    <span class="icon is-small">
+                      <font-awesome-icon :icon="['far', 'clock']" />
+                    </span>
+                    <time>{{ post.created_at_ts|ts2datetime }}</time>
                   </div>
                 </div>
               </div>
-              <article class="content" v-html="post.html_content"></article>
-
+              <article class="content" v-html="post.html_content" />
               <hr>
               <div class="level">
                 <div class="level-left">
@@ -30,7 +41,7 @@
       </div>
     </section>
 
-    <d-footer></d-footer>
+    <d-footer />
   </div>
 </template>
 
@@ -39,6 +50,7 @@ import { fetchDetail } from '@/api/post';
 import { ts2datetime } from '@/filters';
 import Navbar from '@/components/Navbar/index';
 import Footerbar from '@/components/Footer/index';
+import Breadcrumb from '@/components/Breadcrumb/index';
 import Tags from '@/components/Tags/index';
 
 
@@ -48,6 +60,14 @@ export default {
     return {
       breaks: false,
       post: {},
+      items: [
+        {
+          name: 'post',
+          icon: ['fas', 'pencil-alt'],
+          path: '/posts',
+          is_active: false,
+        },
+      ],
     };
   },
   computed: {
@@ -61,6 +81,7 @@ export default {
   components: {
     'd-navbar': Navbar,
     'd-footer': Footerbar,
+    'd-breadcrumb': Breadcrumb,
     'd-tags': Tags,
   },
   filters: {
@@ -70,6 +91,12 @@ export default {
     getDetail(slug) {
       fetchDetail(slug).then((response) => {
         this.post = response.data;
+        const item = {
+          name: this.post.title,
+          path: '/posts',
+          is_active: true,
+        };
+        this.items.push(...[item]);
       });
     },
   },
