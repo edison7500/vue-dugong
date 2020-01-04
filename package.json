@@ -28,7 +28,8 @@
     "vue-infinite-loading": "^2.4.4",
     "vue-markdown": "^2.2.4",
     "vue-router": "^3.0.1",
-    "vue-truncate-collapsed": "^2.1.0"
+    "vue-truncate-collapsed": "^2.1.0",
+    "vuex": "^3.1.2"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",

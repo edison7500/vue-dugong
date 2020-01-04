@@ -14,6 +14,7 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
 import App from './App';
 import router from './router';
+import store from './store';
 
 
 library.add(fab);
@@ -32,6 +33,7 @@ Vue.use(InfiniteLoading, { /* options */ });
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>',
 });

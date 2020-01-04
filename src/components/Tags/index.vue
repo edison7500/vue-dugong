@@ -1,7 +1,7 @@
 <template>
-  <div class="level-left">
-    <div class="tags"></div>
-  </div>
+    <div class="tags">
+      <span v-for="(t, index) in tags" :key="index" class="tag">{{ t }}</span>
+    </div>
 </template>
 
 <script>
@@ -9,7 +9,7 @@ export default {
   name: 'index',
   props: {
     tags: {
-      type: Object,
+      type: Array,
     },
   },
 };

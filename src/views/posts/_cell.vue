@@ -8,11 +8,13 @@
       <truncate class="content" :text="post.digest" clamp="..."></truncate>
 
       <div class="level">
-        <div class="level-left"></div>
+        <div class="level-left">
+          <d-tags :tags="post.tags"/>
+        </div>
         <div class="level-right">
           <div class="level-item">
             <font-awesome-icon :icon="['far', 'clock']" />
-            {{ post.created_at_ts|ts2datetime }}
+            &nbsp;{{ post.created_at_ts|ts2datetime }}
           </div>
         </div>
       </div>
@@ -22,6 +24,7 @@
 <script>
 import truncate from 'vue-truncate-collapsed';
 import { ts2datetime } from '@/filters';
+import Tags from '@/components/Tags/index';
 
 export default {
   name: 'post-cell',
@@ -29,6 +32,7 @@ export default {
     'post',
   ],
   components: {
+    'd-tags': Tags,
     truncate,
   },
   filters: {

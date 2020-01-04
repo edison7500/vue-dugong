@@ -19,6 +19,11 @@
               <article class="content" v-html="post.html_content"></article>
 
               <hr>
+              <div class="level">
+                <div class="level-left">
+                  <d-tags :tags="post.tags" />
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -31,9 +36,10 @@
 
 <script>
 import { fetchDetail } from '@/api/post';
+import { ts2datetime } from '@/filters';
 import Navbar from '@/components/Navbar/index';
 import Footerbar from '@/components/Footer/index';
-import { ts2datetime } from '@/filters';
+import Tags from '@/components/Tags/index';
 
 
 export default {
@@ -55,6 +61,7 @@ export default {
   components: {
     'd-navbar': Navbar,
     'd-footer': Footerbar,
+    'd-tags': Tags,
   },
   filters: {
     ts2datetime,
