@@ -18,7 +18,14 @@
           <div class="column is-8-desktop">
             <div class="box">
               <h1 class="title">{{ article.title }}</h1>
-              <article :v-html=article.content class="content"/>
+              <d-article-meta :ts="article.created_at_ts" :origin_link="article.origin_link" />
+              <article v-html=article.html_content class="content"/>
+              <hr>
+              <div class="level">
+                <div class="level-left">
+                  <d-tags :tags="article.tags" />
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -33,6 +40,8 @@
 import NavBar from '@/components/Navbar/index';
 import Footer from '@/components/Footer/index';
 import Breadcrumb from '@/components/Breadcrumb/index';
+import Tags from '@/components/Tags/index';
+import ArticleMeta from '@/components/Widgets/Article/_meta';
 import { fetchDetail } from '@/api/tutorial';
 import { ts2datetime } from '@/filters';
 
@@ -42,6 +51,8 @@ export default {
     'd-navbar': NavBar,
     'd-footer': Footer,
     'd-breadcrumb': Breadcrumb,
+    'd-tags': Tags,
+    'd-article-meta': ArticleMeta,
   },
   data() {
     return {

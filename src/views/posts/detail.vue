@@ -18,16 +18,7 @@
           <div class="column is-8 is-desktop">
             <div class="box">
               <h1 class="title">{{ post.title }}</h1>
-              <div class="level">
-                <div class="level-left">
-                  <div class="level-item">
-                    <span class="icon is-small">
-                      <font-awesome-icon :icon="['far', 'clock']" />
-                    </span>
-                    <time>{{ post.created_at_ts|ts2datetime }}</time>
-                  </div>
-                </div>
-              </div>
+              <d-article-meta :ts="post.created_at_ts" />
               <article class="content" v-html="post.html_content" />
               <hr>
               <div class="level">
@@ -46,12 +37,13 @@
 </template>
 
 <script>
-import { fetchDetail } from '@/api/post';
-import { ts2datetime } from '@/filters';
 import Navbar from '@/components/Navbar/index';
 import Footerbar from '@/components/Footer/index';
 import Breadcrumb from '@/components/Breadcrumb/index';
 import Tags from '@/components/Tags/index';
+import ArticleMeta from '@/components/Widgets/Article/_meta';
+import { fetchDetail } from '@/api/post';
+import { ts2datetime } from '@/filters';
 
 
 export default {
@@ -82,6 +74,7 @@ export default {
     'd-footer': Footerbar,
     'd-breadcrumb': Breadcrumb,
     'd-tags': Tags,
+    'd-article-meta': ArticleMeta,
   },
   filters: {
     ts2datetime,
