@@ -11,6 +11,8 @@ import { far } from '@fortawesome/free-regular-svg-icons';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
+import VueLazyload from 'vue-lazyload'
+
 
 import App from './App';
 import router from './router';
@@ -28,6 +30,7 @@ Vue.config.productionTip = false;
 
 Vue.use(Buefy);
 Vue.use(InfiniteLoading, { /* options */ });
+Vue.use(VueLazyload);
 
 /* eslint-disable no-new */
 new Vue({

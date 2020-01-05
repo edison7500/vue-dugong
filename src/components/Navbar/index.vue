@@ -9,7 +9,7 @@
       <div class="navbar-menu">
 
         <div class="navbar-start">
-          <router-link to="/" class="navbar-item">
+          <router-link :to="{name: 'tutorials'}" class="navbar-item">
             <font-awesome-icon :icon="['fas', 'book']" />&nbsp;教程
           </router-link>
           <router-link to="/" class="navbar-item">

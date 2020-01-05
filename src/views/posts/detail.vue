@@ -58,7 +58,6 @@ export default {
   name: 'detail',
   data() {
     return {
-      breaks: false,
       post: {},
       items: [
         {
@@ -93,7 +92,7 @@ export default {
         this.post = response.data;
         const item = {
           name: this.post.title,
-          path: '/posts',
+          path: this.$route.path,
           is_active: true,
         };
         this.items.push(...[item]);
