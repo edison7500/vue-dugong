@@ -6,7 +6,11 @@
       </figure>
     </div>
     <div class="card-content">
-      <h1>{{ tutorial.title }}</h1>
+      <h1>
+        <router-link :to="{name: 'tutorial-detail', params: {slug: tutorial.slug}}">
+          {{ tutorial.title }}
+        </router-link>
+      </h1>
     </div>
   </div>
 </template>
