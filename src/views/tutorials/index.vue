@@ -1,6 +1,5 @@
 <template>
   <div>
-    <d-navbar />
     <section class="section">
       <div class="container">
         <div class="columns is-multiline">
@@ -20,13 +19,10 @@
       </div>
     </section>
 
-    <d-footer />
   </div>
 </template>
 
 <script>
-import NavBar from '@/components/Navbar/index';
-import Footer from '@/components/Footer/index';
 import Breadcrumb from '@/components/Breadcrumb/index';
 import TutorailCell from './_cell';
 import { fetchList } from '../../api/tutorial';
@@ -34,8 +30,6 @@ import { fetchList } from '../../api/tutorial';
 export default {
   name: 'index',
   components: {
-    'd-navbar': NavBar,
-    'd-footer': Footer,
     'd-breadcrumb': Breadcrumb,
     'd-tutorial-cell': TutorailCell,
   },

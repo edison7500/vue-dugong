@@ -1,6 +1,6 @@
 <template>
   <div>
-    <d-navbar />
+<!--    <d-navbar />-->
     <section class="section">
       <div class="container">
         <div class="columns is-centered">
@@ -10,20 +10,20 @@
         </div>
       </div>
     </section>
-    <d-footer />
+<!--    <d-footer />-->
   </div>
 </template>
 
 <script>
-import NavBar from '@/components/Navbar/index';
-import Footer from '@/components/Footer/index';
+// import NavBar from '@/components/Navbar/index';
+// import Footer from '@/components/Footer/index';
 
 export default {
   name: 'about',
-  components: {
-    'd-navbar': NavBar,
-    'd-footer': Footer,
-  },
+  // components: {
+  //   'd-navbar': NavBar,
+  //   'd-footer': Footer,
+  // },
 };
 </script>
 

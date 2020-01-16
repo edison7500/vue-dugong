@@ -1,7 +1,5 @@
 <template>
   <div>
-    <d-navbar />
-
     <section class="section">
       <div class="container">
         <div class="columns">
@@ -32,13 +30,10 @@
       </div>
     </section>
 
-    <d-footer />
   </div>
 </template>
 
 <script>
-import NavBar from '@/components/Navbar/index';
-import Footer from '@/components/Footer/index';
 import Breadcrumb from '@/components/Breadcrumb/index';
 import Tags from '@/components/Tags/index';
 import ArticleMeta from '@/components/Widgets/Article/_meta';
@@ -48,8 +43,6 @@ import { ts2datetime } from '@/filters';
 export default {
   name: 'detail',
   components: {
-    'd-navbar': NavBar,
-    'd-footer': Footer,
     'd-breadcrumb': Breadcrumb,
     'd-tags': Tags,
     'd-article-meta': ArticleMeta,

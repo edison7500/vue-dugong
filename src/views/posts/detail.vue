@@ -1,6 +1,6 @@
 <template>
   <div>
-    <d-navbar />
+<!--    <d-navbar />-->
 
     <section class="section">
       <div class="container">
@@ -32,13 +32,13 @@
       </div>
     </section>
 
-    <d-footer />
+<!--    <d-footer />-->
   </div>
 </template>
 
 <script>
-import Navbar from '@/components/Navbar/index';
-import Footerbar from '@/components/Footer/index';
+// import Navbar from '@/components/Navbar/index';
+// import Footerbar from '@/components/Footer/index';
 import Breadcrumb from '@/components/Breadcrumb/index';
 import Tags from '@/components/Tags/index';
 import ArticleMeta from '@/components/Widgets/Article/_meta';
@@ -70,8 +70,6 @@ export default {
     this.getDetail(this.slug);
   },
   components: {
-    'd-navbar': Navbar,
-    'd-footer': Footerbar,
     'd-breadcrumb': Breadcrumb,
     'd-tags': Tags,
     'd-article-meta': ArticleMeta,

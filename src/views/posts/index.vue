@@ -1,6 +1,6 @@
 <template>
   <div>
-    <d-navbar />
+<!--    <d-navbar />-->
 
     <section class="section">
       <div class="container">
@@ -33,22 +33,20 @@
       </div>
     </section>
 
-    <d-footer/>
+<!--    <d-footer/>-->
   </div>
 </template>
 
 <script>
 import { fetchList } from '@/api/post';
-import NavBar from '@/components/Navbar/index';
-import Footer from '@/components/Footer/index';
+// import NavBar from '@/components/Navbar/index';
+// import Footer from '@/components/Footer/index';
 import Breadcrumb from '@/components/Breadcrumb/index';
 import PostCell from './_cell';
 
 export default {
   name: 'post-index',
   components: {
-    'd-navbar': NavBar,
-    'd-footer': Footer,
     'd-breadcrumb': Breadcrumb,
     'post-cell': PostCell,
   },
