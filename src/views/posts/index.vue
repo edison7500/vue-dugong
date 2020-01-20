@@ -34,8 +34,6 @@
         </div>
       </div>
     </section>
-
-<!--    <d-footer/>-->
   </div>
 </template>
 
