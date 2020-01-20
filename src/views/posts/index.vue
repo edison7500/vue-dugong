@@ -15,12 +15,11 @@
     <section>
       <div class="container">
         <div class="columns is-desktop is-multiline clearfix">
-          <div class="column is-8">
+          <div class="column is-8-desktop is-12-mobile">
             <div class="box">
               <article class="media"
                        v-for="(post, index) in posts"
-                       v-bind:key="index"
-              >
+                       v-bind:key="index">
                 <post-cell :post=post />
               </article>
             </div>
@@ -28,6 +27,9 @@
               <div slot="no-more">No more message</div>
               <div slot="no-results">No results message</div>
             </infinite-loading>
+          </div>
+          <div class="column is-4-desktop is-hidden-mobile">
+            <gh-sidebar />
           </div>
         </div>
       </div>
@@ -42,6 +44,7 @@ import { fetchList } from '@/api/post';
 // import NavBar from '@/components/Navbar/index';
 // import Footer from '@/components/Footer/index';
 import Breadcrumb from '@/components/Breadcrumb/index';
+import githubSidebar from '@/components/Sidebar/github';
 import PostCell from './_cell';
 
 export default {
@@ -49,6 +52,7 @@ export default {
   components: {
     'd-breadcrumb': Breadcrumb,
     'post-cell': PostCell,
+    'gh-sidebar': githubSidebar,
   },
   data() {
     return {

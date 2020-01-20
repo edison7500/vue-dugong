@@ -67,12 +67,6 @@ export default {
     getDetail(slug) {
       fetchDetail(slug).then((response) => {
         this.article = response.data;
-        // const item = {
-        //   name: this.article.title,
-        //   path: this.$route.path,
-        //   is_active: true,
-        // };
-        // this.items.push(...[item]);
       });
     },
   },
