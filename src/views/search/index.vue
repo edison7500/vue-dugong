@@ -1,10 +1,21 @@
 <template>
-  <div></div>
+  <section>
+    <form>
+      <b-field>
+        <b-autocomplete />
+      </b-field>
+    </form>
+  </section>
 </template>
 
 <script>
 export default {
-  name: 'search',
+  name: 'd-search',
+  data() {
+    return {
+
+    };
+  },
 };
 </script>
 
